@@ -49,37 +49,74 @@ header.mast {
   background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
   color: #fff;
   border-radius: var(--radius);
-  padding: 2rem 2.5rem;
+  padding: 1.85rem 2.25rem;
   box-shadow: var(--shadow-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
 }
 
-.eyebrow {
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  opacity: 0.75;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-}
+.header-content { min-width: 0; }
 
 header.mast h1 {
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: -0.025em;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.3rem;
   line-height: 1.15;
+  color: #fff;
 }
 
-header.mast .sub { font-size: 0.95rem; opacity: 0.9; font-weight: 400; }
+header.mast .sub {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.85);
+  font-weight: 400;
+  margin: 0;
+  max-width: none;
+}
+
+.header-badge {
+  background: rgba(255,255,255,0.16);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: var(--radius-sm);
+  padding: 0.7rem 1.15rem;
+  text-align: right;
+}
+
+.header-badge .label {
+  font-size: 0.63rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: rgba(255,255,255,0.7);
+  font-weight: 600;
+}
+
+.header-badge .date {
+  font-family: var(--mono);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #fff;
+  margin-top: 0.1rem;
+}
+
+/* ── LEAD BLOCK (goals, prescription, targets) ── */
+.lead-block { margin-bottom: 0.5rem; }
 
 .cardlabel {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--text-muted);
-  margin: 2rem 0 0.85rem;
+  letter-spacing: 0.1em;
+  color: var(--primary-dark);
+  margin: 1.9rem 0 0.85rem;
+  padding-left: 0.7rem;
+  border-left: 3px solid var(--primary);
+  line-height: 1.4;
 }
+.lead-block > .cardlabel:first-child { margin-top: 1.75rem; }
 
 /* ── HEADER / FOOTER RAINBOW ── */
 .header-divider {
@@ -433,9 +470,10 @@ footer {
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
   .wrap { padding: 1.25rem 1rem 3rem; }
-  header.mast { padding: 1.4rem 1.25rem; }
-  header.mast h1 { font-size: 1.4rem; }
-  header.mast .sub { font-size: 0.8rem; }
+  header.mast { padding: 1.35rem 1.25rem; flex-direction: column; align-items: flex-start; gap: 1rem; }
+  header.mast h1 { font-size: 1.45rem; }
+  header.mast .sub { font-size: 0.78rem; }
+  .header-badge { align-self: stretch; text-align: left; padding: 0.6rem 0.9rem; }
   details.sec > summary { padding: 0.65rem 1rem; }
   details.sec > summary b { font-size: 0.85rem; }
   .goals { grid-template-columns: repeat(2,1fr); gap: 0.75rem; }
