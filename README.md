@@ -19,7 +19,7 @@ A 30-day diet and lifestyle plan, built as a single static page.
 ## Structure
 
 ```
-index.html    markup and the plan data
+index.html    the plan — goals, meals, recipe prep, shopping, water, tracking
 index.css     all styles
 ```
 
