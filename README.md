@@ -2,6 +2,8 @@
 
 A 30-day diet and lifestyle plan, built as a single static page.
 
+**Live:** https://codewithrobinsh.github.io/my-diet-plan/
+
 **Day 1 = Monday 10 August 2026 · Day 30 = Tuesday 8 September 2026**
 
 ## What it covers
@@ -27,8 +29,11 @@ Fonts load from Google Fonts; everything else works offline.
 
 ## Publishing with GitHub Pages
 
-Settings → Pages → Source: `main`, folder `/root`. The page is then served at
-`https://codewithrobinsh.github.io/my-diet-plan/`.
+Settings → Pages → Source: `main`, folder `/root`.
+
+Note that GitHub Pages requires a public repository on free accounts, and this page
+contains personal health data — name, age, weight and blood results. Keep the repo
+private and open `index.html` locally if you would rather that stayed off the open web.
 
 ---
 
