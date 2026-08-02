@@ -6,7 +6,7 @@
 <title>30-Day Diet Plan — Robinsh Kumar</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -18,7 +18,7 @@
   <p class="sub">Robinsh Kumar · 27 yrs · 170 cm · 56 kg · BMI 19</p>
 
   <p class="cardlabel">What this month is for</p>
-  <div class="goals">
+  <dl class="goals">
     <div class="goal">
       <dt>Triglycerides</dt>
       <div class="gv"><s>448</s><u>→</u><b>&lt;150</b></div>
@@ -49,7 +49,7 @@
       <div class="gv"><b>6 / 6</b></div>
       <dd>meals on time, every day. In week one this matters more than any number above.</dd>
     </div>
-  </div>
+  </dl>
 
   <p class="cardlabel">Prescribed medication</p>
   <div class="rx">
@@ -71,6 +71,8 @@
     <div class="t"><dt>Water</dt><dd>3.2 <span>L</span></dd></div>
   </dl>
 </header>
+
+<div class="header-divider"></div>
 
 <details class="sec" open>
   <summary><b>Your day</b><span class="sr"><em>office Mon · Wed · Fri</em><i class="chev"></i></span></summary>
@@ -737,6 +739,8 @@
   Not a substitute for medical or dietetic advice. Review at the one-month follow-up.
 </footer>
 
+<div class="footer-rainbow"></div>
+
 </div>
 
 <script>
@@ -834,17 +838,17 @@ function render(d){
     }
     if(idx===4) add='<div class="add">+ 10-minute walk</div>';
     const macs=m.tgt
-      ? `<div class="tgrid"><div><dt>kcal</dt><dd>${m.k}</dd></div><div><dt>Protein</dt><dd>${m.p} g</dd></div><div><dt>Fat</dt><dd>${m.f} g</dd></div><div><dt>Carbs</dt><dd>${m.c} g</dd></div></div>`
+      ? `<dl class="tgrid"><div><dt>kcal</dt><dd>${m.k}</dd></div><div><dt>Protein</dt><dd>${m.p} g</dd></div><div><dt>Fat</dt><dd>${m.f} g</dd></div><div><dt>Carbs</dt><dd>${m.c} g</dd></div></dl>`
       : `<div class="mmac">${m.k} kcal · ${m.p} g protein · ${m.f} g fat · ${m.c} g carbs</div>`;
     html+=`<div class="meal${m.tgt?' tgt':''}"><div class="mtime"><i>Meal ${idx+1}</i>${t}<b>${LOC[idx]}</b></div><div>
       <div class="mname">${m.n}${extra}</div><div class="mitems">${m.i}</div>${macs}${add}
     </div></div>`;
   });
-  html+=`<div class="dtotal">
+  html+=`<dl class="dtotal">
     <div><dt>Calories</dt><dd>${Math.round(tk)}</dd></div>
     <div><dt>Protein</dt><dd>${Math.round(tp)} g</dd></div>
     <div><dt>Fat</dt><dd>${Math.round(tf)} g</dd></div>
-    <div><dt>Carbs</dt><dd>${Math.round(tc)} g</dd></div></div>`;
+    <div><dt>Carbs</dt><dd>${Math.round(tc)} g</dd></div></dl>`;
   document.getElementById('day').innerHTML=html;
   document.querySelectorAll('.pd').forEach(b=>b.classList.toggle('on',+b.dataset.d===d));
 }
