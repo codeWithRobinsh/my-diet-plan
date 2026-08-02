@@ -13,6 +13,7 @@ A 30-day diet and lifestyle plan, built as a single static page.
 - **Daily plan** — six meals a day, tap any of the 30 days
 - **Shopping** — one monthly list for non-perishables, five weekly lists for fresh items
 - **Water** — 3.2 litres, timed, all between meals
+- **Exercise** — daily morning block, plus resistance training Tue/Thu/Sat, bodyweight for two weeks then dumbbells
 - **Walking** — 1 km after lunch on office days, 500 m on work-from-home days, 2 km at weekends
 - **Prep, supplements and tracking**
 
