@@ -38,6 +38,7 @@ private and open `index.html` locally if you would rather that stayed off the op
 
 ---
 
-
 Not medical advice. Reviewed against a general physician's prescription dated 2 August 2026;
 any change to medication, dosing or supplements is a decision for a doctor.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
