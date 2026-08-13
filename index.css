@@ -310,7 +310,9 @@ ul.tight li::before {
 
 /* ── WATER GLASSES ── */
 .wrow { display: grid; grid-template-columns: repeat(6,1fr); gap: 0.75rem; margin-bottom: 1.25rem; }
+.wrow.seven { grid-template-columns: repeat(7,1fr); }
 .wrow.coco { grid-template-columns: repeat(2,1fr); max-width: 400px; }
+@media(max-width:900px){ .wrow.seven { grid-template-columns: repeat(4,1fr); } }
 @media(max-width:700px){ .wrow { grid-template-columns: repeat(3,1fr); } }
 .wg {
   background: linear-gradient(135deg,#f0f9ff 0%,#e0f2fe 100%);
@@ -500,4 +502,41 @@ footer {
   .targets { grid-template-columns: repeat(2,1fr); }
   .sched, .wrow { grid-template-columns: repeat(2,1fr); }
   .rc-h h4 { font-size: 1.05rem; }
+}
+
+/* ── DAILY ROUTINE ROWS ── */
+.rb { min-width: 52px; text-align: center; }
+.rrow { display: grid; grid-template-columns: 82px 1fr; gap: 1rem;
+  padding: 0.62rem 1.4rem; border-bottom: 1px solid var(--border); align-items: baseline; }
+.rrow:last-child { border-bottom: none; }
+.rrow:hover { background: var(--bg-subtle); }
+.rt { font-family: var(--mono); font-size: 0.8rem; font-weight: 600; color: var(--text-secondary); }
+.rt b { display: block; font-family: 'Poppins', sans-serif; font-size: 0.55rem; font-weight: 700;
+  letter-spacing: 0.09em; text-transform: uppercase; margin-top: 0.12rem; }
+.rw { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.55; }
+.rw b { color: var(--text); font-weight: 600; }
+.rw em { font-style: normal; font-size: 0.8rem; color: var(--text-muted); }
+
+.rrow.meal  { background: #faf9ff; }
+.rrow.meal .rt, .rrow.meal .rt b { color: var(--primary-dark); }
+.rrow.water .rt, .rrow.water .rt b { color: #0369a1; }
+.rrow.move .rt, .rrow.move .rt b { color: #166534; }
+.rrow.train { background: #f0fdf4; }
+.rrow.train .rt, .rrow.train .rt b { color: #15803d; }
+.rrow.light .rt, .rrow.light .rt b { color: #4d7c0f; }
+.rrow.sleep { background: #fff7ed; }
+.rrow.sleep .rt, .rrow.sleep .rt b { color: #c2410c; }
+.rrow.wake .rt, .rrow.wake .rt b { color: #c2410c; }
+.rrow.study { background: #fefce8; }
+.rrow.study .rt, .rrow.study .rt b { color: #a16207; }
+.rrow.study .rw b { color: #854d0e; }
+.rrow.work { background: #fbfbfb; }
+.rrow.work .rt, .rrow.work .rt b { color: var(--text-muted); }
+.rrow.work .rw { color: var(--text-muted); }
+.rrow.x .rt { color: var(--text-muted); }
+
+@media (max-width: 640px) {
+  .rrow { grid-template-columns: 66px 1fr; gap: 0.7rem; padding: 0.55rem 1rem; }
+  .rt { font-size: 0.72rem; }
+  .rw { font-size: 0.82rem; }
 }
