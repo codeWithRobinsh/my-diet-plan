@@ -103,6 +103,24 @@ header.mast p {
   margin-top: 0.1rem;
 }
 
+/* ── TOP NAV ── */
+.topnav { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0 0 0.5rem; }
+.topnav a {
+  font-size: 0.74rem; font-weight: 600; letter-spacing: 0.01em;
+  padding: 0.45rem 0.85rem; border: 1px solid var(--border-strong);
+  background: var(--bg-card); color: var(--text-secondary);
+  text-decoration: none; border-radius: 999px; white-space: nowrap;
+  transition: all .16s;
+}
+.topnav a:hover {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: #fff; border-color: transparent; box-shadow: var(--shadow-sm);
+}
+@media (max-width: 520px) {
+  .topnav { gap: 0.3rem; }
+  .topnav a { font-size: 0.68rem; padding: 0.38rem 0.65rem; }
+}
+
 /* ── LEAD BLOCK (goals, prescription, targets) ── */
 .lead-block { margin-bottom: 0.5rem; }
 
@@ -197,7 +215,7 @@ header.mast p {
 .t dd span { font-size: 0.75rem; font-weight: 400; color: var(--text-muted); }
 
 /* ── COLLAPSIBLE SECTIONS ── */
-details.sec { margin-top: 1.5rem; border: none; }
+details.sec { margin-top: 1.5rem; border: none; scroll-margin-top: 12px; }
 
 details.sec > summary {
   cursor: pointer; list-style: none; user-select: none;
